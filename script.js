@@ -7,7 +7,7 @@
   /* ----- ツール定義（順序: FSstriders → FSScreener → FSSplicer → FSShowdown） ----- */
   var TOOLS = {
     fsst: {
-      name: 'FSstriders',
+      name: 'FSStriders',
       icon: 'images/icon_fsst.png',
       url: 'https://jiz41.github.io/FSstriders/',
       wip: false,
@@ -92,7 +92,7 @@
 
     detailIcon.setAttribute('src', t.icon);
     detailIcon.setAttribute('alt', t.name);
-    detailName.textContent = t.name;
+    detailName.innerHTML = '<span class="fss-accent">' + t.name.slice(0, 3) + '</span>' + t.name.slice(3);
     detailDesc.textContent = (lang === 'en') ? t.en : t.ja;
     detailLink.setAttribute('href', t.url);
 

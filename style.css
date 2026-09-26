@@ -117,7 +117,7 @@ button {
   position: absolute;
   inset: 0 -6% auto -6%;
   height: 100%;
-  background: linear-gradient(105deg, var(--navy-ink) 0%, var(--navy) 58%, #1d2f60 100%);
+  background: linear-gradient(180deg, rgba(10,16,36,.98) 0%, rgba(22,35,74,.9) 40%, rgba(29,47,96,0) 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 62%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 62%, 0 100%);
   box-shadow: 0 10px 26px rgba(0,0,0,.42);
@@ -141,13 +141,13 @@ button {
   margin: 0;
   font-size: clamp(34px, 11vw, 62px);
   line-height: 1;
-  letter-spacing: .01em;
-  font-weight: 800;
+  letter-spacing: .005em;
+  font-weight: 900;
   font-style: italic;
   text-shadow: 0 3px 0 rgba(0,0,0,.35);
 }
 
-.logo-fs    { color: var(--orange); }
+.fss-accent { color: var(--orange); }
 .logo-suite { color: var(--cream); }
 
 .title-panel__tag {
@@ -155,6 +155,7 @@ button {
   font-size: clamp(12px, 3.6vw, 16px);
   font-weight: 700;
   letter-spacing: .04em;
+  line-height: 1.2;
   color: var(--cream);
 }
 
@@ -242,10 +243,10 @@ button {
 }
 
 /* --- 配置（モバイル縦：上にタイトル、下半分に4つを千鳥） --- */
-.icon--fsst { left: 26%; top: 46%; }
-.icon--fssc { left: 74%; top: 57%; }
-.icon--fssp { left: 26%; top: 69%; }
-.icon--fssh { left: 74%; top: 79%; }
+.icon--fsst { left: 26%; top: 38%; }
+.icon--fssc { left: 74%; top: 48%; }
+.icon--fssp { left: 26%; top: 60%; }
+.icon--fssh { left: 74%; top: 70%; }
 
 @keyframes float {
   0%, 100% { transform: translate(-50%, -50%) translateY(0); }
@@ -298,6 +299,35 @@ button {
   line-height: 1.55;
   color: rgba(246,241,230,.72);
   text-align: center;
+}
+
+.footer__text a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.footer__text a:hover,
+.footer__text a:focus-visible {
+  text-decoration: underline;
+}
+
+.footer__credit {
+  margin: 6px auto 0;
+  max-width: 900px;
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: rgba(246,241,230,.72);
+  text-align: center;
+}
+
+.footer__credit a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.footer__credit a:hover,
+.footer__credit a:focus-visible {
+  text-decoration: underline;
 }
 
 /* =========================================================
@@ -490,10 +520,10 @@ button {
   }
 
   /* 馬を中央に残し、左右の余白へ 2 + 2 */
-  .icon--fsst { left: 15%; top: 40%; }
-  .icon--fssc { left: 15%; top: 72%; }
-  .icon--fssp { left: 85%; top: 40%; }
-  .icon--fssh { left: 85%; top: 72%; }
+  .icon--fsst { left: 15%; top: 32%; }
+  .icon--fssc { left: 15%; top: 64%; }
+  .icon--fssp { left: 85%; top: 32%; }
+  .icon--fssh { left: 85%; top: 64%; }
 
   .hint { bottom: 70px; font-size: 12.5px; }
 
@@ -501,19 +531,19 @@ button {
 }
 
 @media (min-width: 1200px) {
-  .icon--fsst { left: 19%; top: 38%; }
-  .icon--fssc { left: 19%; top: 70%; }
-  .icon--fssp { left: 81%; top: 38%; }
-  .icon--fssh { left: 81%; top: 70%; }
+  .icon--fsst { left: 19%; top: 30%; }
+  .icon--fssc { left: 19%; top: 62%; }
+  .icon--fssp { left: 81%; top: 30%; }
+  .icon--fssh { left: 81%; top: 62%; }
 }
 
 /* 低い横画面 */
 @media (max-height: 520px) and (orientation: landscape) {
   .icon { width: 13vw; min-width: 64px; }
-  .icon--fsst { left: 13%; top: 42%; }
-  .icon--fssc { left: 13%; top: 76%; }
-  .icon--fssp { left: 87%; top: 42%; }
-  .icon--fssh { left: 87%; top: 76%; }
+  .icon--fsst { left: 13%; top: 34%; }
+  .icon--fssc { left: 13%; top: 68%; }
+  .icon--fssp { left: 87%; top: 34%; }
+  .icon--fssh { left: 87%; top: 68%; }
   .hint { display: none; }
   .title-panel__inner { padding: 14px 20px 26px; }
 }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>FSSuite</title>
+<meta name="description" content="FSSuite - FSstriders / FSScreener / FSSplicer / FSShowdown. ファンによる非公式ツール群の入口ページです。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ===== トップ（メニュー）画面 ===== -->
+  <main id="menu" class="menu">
+
+    <div class="stage" id="stage">
+
+      <!-- 見出しパネル -->
+      <header class="title-panel">
+        <div class="title-panel__slab"></div>
+        <div class="title-panel__inner">
+          <h1 class="title-panel__logo">
+            <span class="logo-fs">FS</span><span class="logo-suite">Suite</span>
+          </h1>
+          <p class="title-panel__tag"
+             data-ja="Full Stride 非公式ファンメイド・ツール群"
+             data-en="Unofficial fan-made tools for Full Stride">Full Stride 非公式ファンメイド・ツール群</p>
+          <p class="title-panel__note"
+             data-ja="開発元とは関係のない、非営利の個人運営サイトです。"
+             data-en="A non-commercial personal site, unaffiliated with the developer.">開発元とは関係のない、非営利の個人運営サイトです。</p>
+        </div>
+      </header>
+
+      <!-- アイコン群 -->
+      <nav class="icons" aria-label="tools">
+
+        <button class="icon icon--fsst" type="button" data-tool="fsst" style="--fx:0s;">
+          <span class="icon__plate">
+            <img src="images/icon_fsst.png" alt="FSstriders" draggable="false">
+          </span>
+          <span class="icon__label">FSstriders</span>
+        </button>
+
+        <button class="icon icon--fssc" type="button" data-tool="fssc" style="--fx:-1.1s;">
+          <span class="icon__plate">
+            <img src="images/icon_fssc.png" alt="FSScreener" draggable="false">
+          </span>
+          <span class="icon__label">FSScreener</span>
+        </button>
+
+        <button class="icon icon--fssp" type="button" data-tool="fssp" style="--fx:-2.2s;">
+          <span class="icon__plate">
+            <img src="images/icon_fssp.png" alt="FSSplicer" draggable="false">
+          </span>
+          <span class="icon__label">FSSplicer</span>
+        </button>
+
+        <button class="icon icon--fssh" type="button" data-tool="fssh" style="--fx:-3.3s;">
+          <span class="icon__plate">
+            <img src="images/icon_fssh.png" alt="FSShowdown" draggable="false">
+          </span>
+          <span class="icon__label">FSShowdown</span>
+        </button>
+
+      </nav>
+
+      <p class="hint"
+         data-ja="アイコンを選んでください"
+         data-en="Choose an icon">アイコンを選んでください</p>
+
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <p class="footer__text"
+         data-ja="『FULL STRIDE』の名称はBLUE BULLETの商標または登録商標です。FSSuiteはファンによる非公式ツール群であり、開発元とは一切関係のない、非営利の個人運営サイトです。"
+         data-en="&ldquo;FULL STRIDE&rdquo; is a trademark or registered trademark of BLUE BULLET. FSSuite is an unofficial, fan-made set of tools with no affiliation whatsoever to the developer, run personally and non-commercially.">『FULL STRIDE』の名称はBLUE BULLETの商標または登録商標です。FSSuiteはファンによる非公式ツール群であり、開発元とは一切関係のない、非営利の個人運営サイトです。</p>
+    </footer>
+
+  </main>
+
+  <!-- ===== 暗転レイヤー ===== -->
+  <div id="blackout" class="blackout" aria-hidden="true"></div>
+
+  <!-- ===== 詳細パネル ===== -->
+  <section id="detail" class="detail" aria-hidden="true">
+    <div class="detail__inner">
+
+      <div class="detail__iconwrap">
+        <img id="detail-icon" class="detail__icon" src="" alt="">
+      </div>
+
+      <h2 id="detail-name" class="detail__name"></h2>
+
+      <p id="detail-badge" class="detail__badge" hidden
+         data-ja="制作中" data-en="In development">制作中</p>
+
+      <p id="detail-desc" class="detail__desc"></p>
+
+      <a id="detail-link" class="detail__link" href="#" target="_blank" rel="noopener noreferrer">
+        <span data-ja="サイトを開く" data-en="Open the site">サイトを開く</span>
+      </a>
+
+      <button id="detail-back" class="detail__back" type="button">
+        <span data-ja="戻る" data-en="Back">戻る</span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ===== 言語切替 ===== -->
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">
+    <span class="lang-toggle__opt is-active" data-lang="ja">JA</span>
+    <span class="lang-toggle__sep">/</span>
+    <span class="lang-toggle__opt" data-lang="en">EN</span>
+  </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
